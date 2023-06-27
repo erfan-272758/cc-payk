@@ -1,8 +1,8 @@
 import "./loadEnv.js";
-import mongoose from "mongoose";
+import { connect } from "mongoose";
 import app from "./app.js";
 
-mongoose.connect(process.env.MONGO_URL).then(() => {
+connect(process.env.MONGO_URL).then(() => {
   console.log("DB Connected");
 });
 
