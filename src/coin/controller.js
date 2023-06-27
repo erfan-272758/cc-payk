@@ -1,6 +1,6 @@
 import { Router } from "express";
-import priceModel from "../models/price.mode";
-import alertSubscriptionModel from "../models/alertSubscription.model";
+import priceModel from "../models/price.mode.js";
+import alertSubscriptionModel from "../models/alertSubscription.model.js";
 
 const route = Router();
 
@@ -28,3 +28,5 @@ route.post("/:coin_name/subscribe", async (req, res) => {
 
   return res.status(201).json({ data: alert });
 });
+
+export default route;
